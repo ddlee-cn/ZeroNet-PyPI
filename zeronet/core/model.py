@@ -2,9 +2,14 @@
 # License: MIT
 # Docs:
 
-
+from __future__ import print_function
+try:
+    import pickle as pickle
+    import range
+else:
+    import cPickle as pickle
+    import xrange as range
 import os
-import pickle as pickle
 import numpy as np
 import zeronet.core.optimizer as optim
 

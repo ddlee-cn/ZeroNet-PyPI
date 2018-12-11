@@ -1,5 +1,8 @@
 language: python
 python:
+- '2.7'
+- '3.5'
+- '3.6'
 - '3.7'
 matrix:
   include:
@@ -9,8 +12,9 @@ before_install:
 - pip install poetry
 install:
 - poetry install -v
+- pip install tox-travis
 script:
-- poetry run pytest -v
+- tox
 before_deploy:
 - poetry config http-basic.pypi $PYPI_USER $PYPI_PASSWORD
 - poetry build
