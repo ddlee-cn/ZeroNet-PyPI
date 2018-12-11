@@ -11,7 +11,6 @@ install:
 - poetry install -v
 script:
 - poetry run pytest tests/function_test.py
-- poetry run pytest tests/layer_test.py
 before_deploy:
 - poetry config http-basic.pypi $PYPI_USER $PYPI_PASSWORD
 - poetry build
