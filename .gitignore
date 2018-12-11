@@ -1,5 +1,7 @@
 # User-added
 .vscode
+data
+demo
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
