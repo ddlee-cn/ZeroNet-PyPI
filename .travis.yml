@@ -1,6 +1,7 @@
 language: python
 python:
 - '3.6'
+- '3.7'
 matrix:
   include:
   - python: 3.7
@@ -17,7 +18,7 @@ before_deploy:
 - poetry build
 deploy:
   provider: script
-  script: poetry publish --build
+  script: poetry publish
   skip_cleanup: true
   on:
     tags: true
