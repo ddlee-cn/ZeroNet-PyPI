@@ -1,0 +1,17 @@
+language: python
+python:
+- '3.7'
+before_install:
+- pip install poetry
+install:
+- poetry install -v
+before_deploy:
+- poetry config http-basic.pypi $PYPI_USER $PYPI_PASSWORD
+- poetry build
+deploy:
+  provider: script
+  script: poetry publish
+env:
+  global:
+  - secure: [REDACTED]
+  - secure: [REDACTED]
