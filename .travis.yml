@@ -11,8 +11,4 @@ before_deploy:
 deploy:
   provider: script
   script: poetry publish
-env:
-  global:
-  - secure: [REDACTED]
-  - secure: [REDACTED]
 
